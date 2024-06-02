@@ -1,0 +1,25 @@
+{
+    "manifest_version":3,
+    "name":"VK-DME",
+    "description":"download music from VK as text data",
+    "author":"Boris Bad",
+
+    "version":"0.1",
+    "content_scripts":
+    [
+        {
+            "matches":["https://vk.com/audio*"],
+            "js":["scripts/script.js"],
+            "css":["style.css"]
+        }
+    ],
+    "permissions":
+    [
+        "tabs",
+        "storage"
+    ],
+    "action":
+    {
+        "default_popup": "main.html"
+    }
+}
